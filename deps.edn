@@ -1,0 +1,36 @@
+{:paths ["src" "resources"]
+ :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
+             "clojars" {:url "https://clojars.org/repo"}
+             "scijava" {:url "http://maven.scijava.org/content/repositories/public/"}
+             "jitpack" {:url "https://jitpack.io"}
+             "cloudsmith-jvm-libp2p" {:url "https://dl.cloudsmith.io/public/libp2p/jvm-libp2p/maven/"}}
+ :deps {org.clojure/clojure {:mvn/version "1.10.3"}
+        org.clojure/core.async {:mvn/version "1.3.618"}
+        org.clojure/spec.alpha {:mvn/version "0.2.187"}
+        github.cljfx/cljfx {:git/url "https://github.com/cljfx/cljfx"
+                            :sha "ec3c34e619b2408026b9f2e2ff8665bebf70bf56"}
+        net.java.dev.jna/jna {:mvn/version "5.8.0"}
+        net.java.dev.jna/jna-platform {:mvn/version "5.8.0"}
+        expanse/fs-jvm {:local/root "../expanse/fs-jvm"}}
+
+ :aliases
+ {:main
+  {:jvm-opts ["-Dclojure.core.async.pool-size=1" "-Dclojure.compiler.direct-linking=true"]
+   :main-opts ["-m" "lochdown.main"]}
+
+  :repl
+  {:extra-deps {deps-repl/deps-repl {:local/root "../expanse/deps-repl"}
+                nrepl/nrepl {:mvn/version "0.8.3"}
+                cider/cider-nrepl {:mvn/version "0.25.5"}}
+   :main-opts ["-m" "expanse.deps-repl.main"
+               "--init-ns" "lochdown.main"
+               "--port" "7788"
+               "--bind" "0.0.0.0"
+               "--middleware" "cider.nrepl/cider-middleware"]}
+
+  :depstar
+  {:replace-deps {com.github.seancorfield/depstar {:git/url "https://github.com/seancorfield/depstar"
+                                                   :sha "19aa2a828e9adfeb72f302ca1011c9064fa863ce"
+                                                   :tag "2.0.216 + 9"}}
+   :ns-default hf.depstar
+   :exec-args {}}}}

@@ -13,4 +13,3 @@ i say no to updates, update notifications - i walk on water like Jesus
 i am the new operating system
 my color is white
 i have no program icons, i know only words - i know and show programs by their names
-i have no logo - my name, a word - lochdown - defines me

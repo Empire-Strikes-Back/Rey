@@ -8,6 +8,5 @@ and Trash directory itself
 
 my language is clojure
 my runtime is jvm, no graalvm native image
-i say no to updates, update notifications - i walk on water like Jesus
 i am the new operating system
 my color is white

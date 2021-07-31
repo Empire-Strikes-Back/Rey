@@ -19,7 +19,9 @@
    :main-opts ["-m" "lochdown.main"]}
 
   :repl
-  {:extra-deps {deps-repl/deps-repl {:local/root "../expanse/deps-repl"}
+  {:extra-deps {expanse/deps-repl {:git/url "https://github.com/empire-strikes-back/expanse"
+                                   :deps/root "./deps-repl"
+                                   :sha "b6a64233659f8ac859afea61cee1167c836b4c88"}
                 nrepl/nrepl {:mvn/version "0.8.3"}
                 cider/cider-nrepl {:mvn/version "0.25.5"}}
    :main-opts ["-m" "expanse.deps-repl.main"

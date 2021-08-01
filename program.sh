@@ -13,18 +13,7 @@ main(){
 }
 
 uberjar(){
-
-  # clojure -X:depstar uberjar \
-  #   :aot true \
-  #   :jar target/lochdown.standalone.jar \
-  #   :verbose false \
-  #   :main-class lochdown.main
-
-
-  lein with-profiles +prod uberjar
-  mkdir -p target/jpackage-input
   mv target/lochdown.standalone.jar target/jpackage-input/
-  #  java -Dclojure.core.async.pool-size=1 -jar target/lochdown-standalone.jar
 }
 
 j-package(){

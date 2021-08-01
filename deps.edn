@@ -10,8 +10,7 @@
         github.cljfx/cljfx {:git/url "https://github.com/cljfx/cljfx"
                             :sha "ec3c34e619b2408026b9f2e2ff8665bebf70bf56"}
         net.java.dev.jna/jna {:mvn/version "5.8.0"}
-        net.java.dev.jna/jna-platform {:mvn/version "5.8.0"}
-        expanse/fs-jvm {:local/root "../expanse/fs-jvm"}}
+        net.java.dev.jna/jna-platform {:mvn/version "5.8.0"}}
 
  :aliases
  {:main

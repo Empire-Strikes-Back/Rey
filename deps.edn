@@ -18,11 +18,4 @@
 
   :repl
   {:extra-deps {deps-repl/deps-repl {:git/url "https://github.com/empire-strikes-back/deps-repl"
-                                     :sha "8904c39e136aacafc70c3e066856fc87bcdec127"}}}
-
-  :depstar
-  {:replace-deps {com.github.seancorfield/depstar {:git/url "https://github.com/seancorfield/depstar"
-                                                   :sha "19aa2a828e9adfeb72f302ca1011c9064fa863ce"
-                                                   :tag "2.0.216 + 9"}}
-   :ns-default hf.depstar
-   :exec-args {}}}}
+                                     :sha "8904c39e136aacafc70c3e066856fc87bcdec127"}}}}}
